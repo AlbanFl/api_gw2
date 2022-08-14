@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<style>
+
+.none
+{
+    background-color:grey
+}
+
+.green
+{
+    background-color:#2fdf08;
+}
+
+.red
+{
+    background-color: #f60c0c;
+}
+
+.blue
+{
+    background-color:#081cdf;
+}
+
+#table{
+    display: flex;
+}
+
+td {
+    width : 80px;
+}
+
+#tableResult{
+    display:flex;
+    align-items:center;
+}
+
+.globalResults{
+    justify-content:center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#results {
+    font-size: 20px;
+    margin-left : 10%;
+    width:40%;
+    height:400px;
+    background-color: rgb(234, 218, 218);
+    font:white;
+    position:"absolute";
+}
+
+table {
+    border:solid 1px;
+
+}
+
+.premier{
+    text-align:center;
+    width:60px;
+}
+
+.deuxieme{
+    text-align:center;
+    width:20px;
+}
+</style>
+
+<head>
+    <meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+
+    <title> AR Skirmish History </title>
+    
+</head>
+
+<body>
+
+    <h1> Augury rock history (beta) </h1>
+    <div id = "tableResult">
+
+    <div id = "table"> 
+        <table class="table">
+            <tr>
+                <th scope="col">Hour</th>
+                <th scope="col">Friday</th>
+                <th scope="col">Saturday</th>
+                <th scope="col">Sunday</th>
+                <th scope="col">Monday</th>
+                <th scope="col">Tuesday</th>
+                <th scope="col">Wednesday</th>
+                <th scope="col">Thursday</th>
+                <th scope="col">Friday</th>
+            </tr>
+
+            <tr id="row0"></tr>
+            <tr id="row1"></tr>
+            <tr id="row2"></tr>
+            <tr id="row3"></tr>
+            <tr id="row4"></tr>
+            <tr id="row5"></tr>
+            <tr id="row6"></tr>
+            <tr id="row7"></tr>
+            <tr id="row8"></tr>
+            <tr id="row9"></tr>
+            <tr id="row10"></tr>
+            <tr id="row11"></tr>
+
+        </table>
+    </div>
+
+    <div id ="results" class ="container-fluid"></div>
+
+    </div>
+
+    <button id="globalInfos" type="button" class="btn btn-dark">Matchup stats</button>
+    <script type="text/javascript" src="js/table_build.js"></script>
+
+</body>

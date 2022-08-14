@@ -1,0 +1,30 @@
+name: API call
+on:
+  schedule:
+    - cron: '45 1/2 * * *' #    - cron:  '0 0,2,4,6,8,10,12,14,16,18,20,22 * * *'
+  workflow_dispatch:
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo content
+        uses: actions/checkout@v2 # checkout the repository content to github runner.
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8 #install the python needed
+      - name: add library
+        run: |
+          pip install requests
+          pip install pytz
+          pip install python-dateutil
+      - name: execute py script # run the run.py to get the latest data
+        run: |
+          python test.py
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "AlbanFl"
+          git config --global user.email "alban.flandin@gmail.com"
+          git add -A
+          git commit -m "periodic commit"
+          git push
