@@ -7,9 +7,16 @@
   })
 })*/
 
-async function loadDatas() {
-  const response = await fetch('./results/results2022_32.json');
+async function loadDatas(b=-1) {
 
+  //get the good week file
+  const reponse_properties = await fetch("./results/properties.json");
+  const datas_properties = await reponse_properties.json();
+
+  var year = datas_properties["year"]
+  var week = datas_properties["CurrentWeek"]
+
+  const response = await fetch('./results/results' + year.toString() + "_" + week.toString + '.json');
   const datas = await response.json();
 
   function mouseClick(e) {
