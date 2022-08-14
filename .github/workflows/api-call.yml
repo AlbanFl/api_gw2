@@ -20,7 +20,7 @@ jobs:
           pip install python-dateutil
       - name: execute py script # run the run.py to get the latest data
         run: |
-          python test.py
+          python updateJson.py
       - name: Commit and push changes
         run: |
           git config --global user.name "AlbanFl"
