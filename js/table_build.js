@@ -16,7 +16,7 @@ async function loadDatas(b=-1) {
   var year = datas_properties["year"]
   var week = datas_properties["CurrentWeek"]
 
-  const response = await fetch('./results/results' + year.toString() + "_" + week.toString + '.json');
+  const response = await fetch('./results/results' + year.toString() + "_" + week.toString() + '.json');
   const datas = await response.json();
 
   function mouseClick(e) {
