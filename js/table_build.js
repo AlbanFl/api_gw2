@@ -141,7 +141,11 @@ async function loadDatas(b=-1) {
     prems = document.createElement('td');
     prems.innerHTML="1";
     prems.classList.add("premier");
-    prems.classList.add(color_premier);
+    if (color_premier != "") {
+      prems.classList.add(color_premier);
+    } else {
+      prems.classList.add("none");
+    }
     prems.skirmish=i.toString()
     current.appendChild(prems);
     //prems.addEventListener('click', mouseClick);
@@ -149,7 +153,11 @@ async function loadDatas(b=-1) {
     deuz = document.createElement('td');
     deuz.innerHTML="2";
     deuz.classList.add("deuxieme");
-    deuz.classList.add(color_deuxieme);
+    if (color_deuxieme != "") {
+      deuz.classList.add(color_deuxieme);
+    } else {
+      deuz.classList.add("none");
+    }
     deuz.skirmish=i.toString()
     current.appendChild(deuz);
     //prems.addEventListener('click', mouseClick);
