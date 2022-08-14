@@ -66,7 +66,7 @@ def getCurrentSkirmish(currentDateTime, weekDay):
 def propertyFile(serverName, year, current_week):
     properties= dict()
     properties["year"] = year
-    properties["CurrentWeek"] = week_num
+    properties["CurrentWeek"] = current_week
     properties["Server"] = serverName
     f = open ("results/properties.json", "w")
     f.write(json.dumps(properties, indent = 2))
